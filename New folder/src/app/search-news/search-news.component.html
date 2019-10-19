@@ -1,0 +1,8 @@
+<div class="col-md-4 offset-4">
+    <span><button class="bg-dark text-light" style="height: 30px;width: 75px; border: 1px solid;">Search</button>
+        <input style="height: 30px;width: 300px;" type="text" name="text" (input) = "getValue($event)"></span>
+</div>
+<div class="col-md-3 float-left card card-body" style="height: 350px;" *ngFor = "let new of search">
+    <img src="{{new.urlToImage}}" style="height: 250px;" alt="">
+    <p>{{new.title}}</p>
+</div>

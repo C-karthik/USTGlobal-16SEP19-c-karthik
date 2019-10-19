@@ -1,0 +1,17 @@
+<div class="col-md-12 offset-4" (change) = "showSour($event)">
+    <select name="select" id="select" class="hg">
+        <option value="bbc-news">BBC News</option>
+        <option value="the-times-of-india">The Times Of India</option>
+        <option value="fox-news">Fox News</option>
+        <option value="espn">ESPN</option>
+        <option value="news24">News24</option>
+        <option value="the-hindu">The Hindu</option>
+        <option value="usa-today">USA Today</option>
+        <option value="national-geographic">National Geographic</option>
+        <option value="mirror">Mirror</option>
+    </select>
+</div>
+<div class="col-md-3 float-left card card-body" style="height: 350px;"  *ngFor = "let ctrynews of sorGet" >
+    <img src="{{ ctrynews .urlToImage}}" style="height: 200px;" alt="">
+    <h1 style="font-size: 16px;">{{ ctrynews .title}}</h1>
+    </div>

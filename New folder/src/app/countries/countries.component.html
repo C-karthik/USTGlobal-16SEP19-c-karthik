@@ -1,0 +1,22 @@
+
+<div class="col-md-12 offset-4  " (change) = "changeNews($event)" >
+    <select name="select" id="select" class="hg">
+        <option value="in">India</option>
+        <option value="us">US</option>
+        <option value="gr">Germany</option>
+        <option value="nl">Newzland</option>
+        <option value="ru">Russia</option>
+        <option value="ro">Rome</option>
+    </select> 
+</div>
+
+<div class="col-md-3 float-left card card-body" style="height: 350px;"  *ngFor = "let ctrynews of ctynews" >
+<img src="{{ ctrynews .urlToImage}}" style="height: 200px;" alt="">
+<h1 style="font-size: 16px;">{{ ctrynews .title}}</h1>
+</div>
+
+
+
+
+
+
