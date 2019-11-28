@@ -1,0 +1,26 @@
+package com.ustglobal.jpawithibernateapp.onetone;
+
+import lombok.Data;
+
+@Data
+public class Person {
+
+	
+	private int pid ;
+	private String pname;
+	
+	//lombok used so no need to create
+	
+//	public int getPid() {
+//		return pid;
+//	}
+//	public void setPid(int pid) {
+//		this.pid = pid;
+//	}
+//	public String getPname() {
+//		return pname;
+//	}
+//	public void setPname(String pname) {
+//		this.pname = pname;
+//	}
+}

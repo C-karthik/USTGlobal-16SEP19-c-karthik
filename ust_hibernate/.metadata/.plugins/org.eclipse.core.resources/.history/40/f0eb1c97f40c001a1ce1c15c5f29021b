@@ -1,0 +1,58 @@
+package com.ustglobal.jpawithibernateapp.onetone;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class TestOneToOne {
+
+	public static void main(String[] args) {
+
+
+		voterId v = new voterId();
+
+		v.setVid(10);
+		v.setVname("Girish");
+
+		Person p = new Person();
+
+		p.setPid(1);
+		p.setPname("Girish");
+		p.setVoter(v);
+		EntityManagerFactory  entityManagerFactory = null;
+		EntityManager entitytyManager = null;
+		EntityTransaction entityTransaction = null;
+
+        entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+        entitytyManager = entityManagerFactory.createEntityManager();
+        entityTransaction = entitytyManager.getTransaction();
+        
+        entityTransaction.begin();
+        
+        voterId v1 = entitytyManager.find(voterId.class, 10);
+        System.out.println(v1.getPerson().getPid()); 
+       // entitytyManager.persist(p);
+        entityTransaction.commit();
+        
+        entitytyManager.close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+}

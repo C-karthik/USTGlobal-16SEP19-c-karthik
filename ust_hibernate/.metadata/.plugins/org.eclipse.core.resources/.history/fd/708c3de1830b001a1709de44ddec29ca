@@ -1,0 +1,57 @@
+package com.ustglobal.hibernatejdbcapp;
+
+import java.sql.*;
+
+import com.mysql.jdbc.Driver;
+
+public class MyJDBCHibernateInsert {
+	
+	public static void main(String[] args) {
+		
+		
+		Connection conn = null;
+		Statement stmt = null ;
+		
+		try {
+			
+			// load and register
+			Driver driver = new Driver();
+			DriverManager.deregisterDriver(driver);
+			
+			//get connection
+			String url = "jdbc:mysql://localhost:3306/ust_ty_jdbc?user=root&password=root";
+			conn = DriverManager.getConnection(url);
+			
+			//issue sql query
+			
+			stmt = conn.createStatement();
+			String sql = "insert into employee value( 171, 'deppu', 20, 1000000, 'developer')";
+			int count = stmt.executeUpdate();
+			
+			System.out.println(count);
+		} catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+		finally{
+			
+			try {
+				if(conn != null) {
+					conn.close();
+				} else if(stmt != null) {
+					stmt.close();
+				}
+			}catch(Exception e) {
+				
+				e.printStackTrace();
+			}
+			
+		}
+
+		
+	}
+	
+	
+}

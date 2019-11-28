@@ -1,0 +1,32 @@
+package com.ustglobal.hibernatejdbcapp;
+
+import java.sql.*;
+
+import com.mysql.jdbc.Driver;
+
+public class MyJDBCHibernateInsert {
+	
+	public static void main(String[] args) {
+		
+		
+		Connection conn = null;
+		PreparedStatement stmt = null ;
+		
+		try {
+			
+			// load and register
+			Driver driver = new Driver();
+			DriverManager.deregisterDriver(driver);
+			
+			
+		} catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+
+		
+	}
+	
+	
+}

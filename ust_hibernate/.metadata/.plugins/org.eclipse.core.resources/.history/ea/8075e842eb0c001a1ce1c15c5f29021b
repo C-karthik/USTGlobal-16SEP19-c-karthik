@@ -1,0 +1,29 @@
+package com.ustglobal.jpawithibernateapp.onetone;
+
+public class TestOneToOne {
+	
+	public static void main(String[] args) {
+		
+		
+		voterId v = new voterId();
+		
+		v.setVid(10);
+		v.setVname("Girish");
+		
+		Person p = new Person();
+		
+	p.setPid(1);
+	p.setPname("Girish");
+	p.setVoter(v);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

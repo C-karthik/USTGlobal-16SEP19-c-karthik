@@ -1,0 +1,23 @@
+package com.ustglobal.jpawithibernateapp.jpql;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+public class DeleteByJPQLDemo {
+	
+	public static void main(String[] args) {
+		
+		
+		EntityManagerFactory entityManagerFactory = null;
+		EntityManager entityManager = null;
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

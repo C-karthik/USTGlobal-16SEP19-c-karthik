@@ -1,0 +1,5 @@
+package com.ustglobal.hibernatejdbcapp;
+
+public class MyFirstJDBCHibernate {
+
+}

@@ -1,0 +1,58 @@
+package com.ustglobal.hibernatejdbcapp;
+
+import com.mysql.jdbc.Driver;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class MyJDBCHibernateUpdate {
+	
+	public static void main(String[] args) {
+		
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String url = "jdbc:mysql://localhost:3306/ust_ty_jdbc?user=root&password=root";
+		String query = "update employee set ename = '?' where empid = ?";
+		try {
+			
+			//load and register driver
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			
+			//get connection
+			
+			conn = DriverManager.getConnection(url);
+			
+			//prepare statement 
+			
+			pstmt = conn.prepareStatement(query);
+			
+			String empid = args[0];
+			String name = args[1];
+			String age = args[2];
+			String salary = args[3];
+			String des = args[4];
+			
+			int id = Integer.parseInt(empid);
+			pstmt.setInt(0, id);
+			int ages = Integer.parseInt(age);
+			pstmt.setInt(2, ages);
+			
+			int desi = Integer.parseInt(des);
+			pstmt.setInt(4, desi);
+			
+			pstmt.setString(1, name);
+			
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.ustglobal.jpawithibernateapp.onetmany;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "pencilbox")
+@Data
+public class PencilBox {
+	
+	@Column
+	@Id
+	private int priceBox;
+	
+	@Column
+	private String brand;
+	
+	
+	private Pencil pe;
+	
+
+}

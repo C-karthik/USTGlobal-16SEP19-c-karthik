@@ -1,0 +1,68 @@
+package com.ustglobal.jpawithibernateapp.jpql.manytomany;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class TestManyToMany {
+	
+	public static void main(String[] args) {
+		
+		
+		Course c = new Course();
+		c.setCid(12);
+		c.setCname("udmey");
+		
+		Course c1 = new Course();
+		c1.setCid(13);
+		c1.setCname("4U");
+		
+		Student s = new Student();
+		s.setSid(10);
+		s.setSname("shishira");
+		
+		Student s1 = new Student();
+		s1.setSid(11);
+		s1.setSname("Girish");
+		
+		ArrayList<Course> course = new ArrayList<Course>();
+		course.add(c);
+		course.add(c1);
+		
+		
+		EntityManagerFactory entityManagerFactory = null;
+		EntityManager entityManager = null;
+		EntityTransaction entityTransaction = null;
+		
+		try {
+			entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+			entityManager = entityManagerFactory.createEntityManager();
+			entityTransaction = entityManager.getTransaction();
+			entityTransaction.begin();
+//			entityManager.persist(c);
+//			entityManager.persist(c1);
+			entityManager.persist(s);
+			entityManager.persist(s1);
+			System.out.println("updated table student_course");
+			
+			entityTransaction.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			entityTransaction.rollback();
+		}
+	
+		entityManager.close();
+		
+		
+		
+	}
+	
+	
+	
+	
+
+}

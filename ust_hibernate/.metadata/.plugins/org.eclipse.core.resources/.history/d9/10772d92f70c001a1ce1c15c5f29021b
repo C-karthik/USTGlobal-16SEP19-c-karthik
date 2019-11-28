@@ -1,0 +1,10 @@
+package com.ustglobal.jpawithibernateapp.onetmany;
+
+public class Pencil {
+
+	private int price;
+	private String brand;
+	
+	
+	
+}

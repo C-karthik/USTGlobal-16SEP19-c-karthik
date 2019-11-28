@@ -1,0 +1,42 @@
+package com.ustglobal.jpawithibernateapp.onetone;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode.Exclude;
+
+@Entity
+@Table(name = "vodercard")
+@Data
+public class voterId {
+	
+	@Id
+	@Column
+	private int vid;
+	@Column
+	private String vname;
+	
+	@Exclude    //to exclude multitimes to string override method bcz @data already override it
+	@OneToOne(mappedBy = "voter")                                                      
+	private Person person ;
+	
+//	public int getVid() {
+//		return vid;
+//	}
+//	public void setVid(int vid) {
+//		this.vid = vid;
+//	}
+//	public String getVname() {
+//		return vname;
+//	}
+//	public void setVname(String vname) {
+//		this.vname = vname;
+//	}
+	
+
+}

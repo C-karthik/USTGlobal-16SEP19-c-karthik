@@ -1,0 +1,22 @@
+package com.ustglobal.hibernatejdbcapp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class MyJDBCHibernateUpdate {
+	
+	public static void main(String[] args) {
+		
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String url = "jdbc:mysql://localhost:3306/ust_ty_jdbc?user=root&password=root";
+		String query = "update employee set ename = '?' where empid = ?";
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.ustglobal.jpawithibernateapp.jpql;
+
+
+import java.util.ArrayList;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.ustglobal.jpawithibernateapp.dto.Product;
+
+public class ReadByJPQLDemo {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		EntityManagerFactory  entityManagerFactory  = Persistence.createEntityManagerFactory("TestPersistence");
+		EntityManager entityManager = entityManagerFactory.createEntityManager();
+		
+		String jpql = "from Product";
+		Query q = entityManager.createQuery(jpql);
+		q.getResultList();
+		
+		ArrayList<Product>  ar = new ArrayList<Product>();
+		
+		for (Product string : ar) {
+			
+			System.out.println(string);
+			
+		}
+	}
+
+}

@@ -1,0 +1,46 @@
+package com.ustglobal.jpawithibernateapp.jpql;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class DynamicDeleteJPQLDemo {
+	
+	public static void main(String[] args) {
+		
+	
+	EntityManagerFactory entityManagerFactory = null;
+	EntityManager entityManager = null;
+	EntityTransaction entityTransaction = null;
+	
+      try {
+    	  
+    	  entityManagerFactory = Persistence.createEntityManagerFactory("TestPersistence");
+    	  entityManager = entityManagerFactory.createEntityManager();
+    	  entityTransaction = entityManager.getTransaction();
+    	  
+    	  entityTransaction.begin();
+    	  
+    	  String  jpql = "delete product where pid = :id";
+    	  
+    	  Query q = entityManager.createQuery(jpql);
+    	  
+    	  q.setParameter("id", 111);
+    	  
+    	 int res = q.executeUpdate();
+    	 
+    	 System.out.println(res);
+    	 
+    	 entityTransaction.commit();
+    	  
+      } catch(Exception e) {
+    	  e.printStackTrace();
+    	  entityTransaction.rollback();
+	}
+      entityManager.close();
+      
+      }
+
+}
