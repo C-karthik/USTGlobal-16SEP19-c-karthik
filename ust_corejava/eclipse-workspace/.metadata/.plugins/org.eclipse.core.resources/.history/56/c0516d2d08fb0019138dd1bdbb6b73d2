@@ -1,0 +1,19 @@
+package com.ustglobal.objClass;
+
+public class Person implements Cloneable {
+	
+	// Cloneable is an example of marker interface just to inform  to JVM
+	
+	int id;
+	String name;
+	
+	public Person(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+}

@@ -1,0 +1,31 @@
+package com.ustglobal.collectionframework.list;
+
+import java.util.ArrayList;
+
+public class TestS {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Student> as = new ArrayList<Student>();
+		
+		Student s = new Student(12, "nivi", 80.89);
+		Student s1 = new Student(13, "sanvi", 82.89);
+		Student s2 = new Student(12, "thanmay", 80.34);
+		
+		as.add(s);
+		as.add(s1);
+		as.add(s2);
+		
+for (int i = 0; i < as.size(); i++) {
+	
+	Student st = as.get(i);
+	System.out.println(st);
+	System.out.println(st.id);
+	System.out.println(st.name);
+	System.out.println(st.Per);
+			
+	
+}
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.ustglobal.objClass;
+
+public class TestO {
+	
+	public static void main(String[] args) {
+		
+		PenDrive p = new PenDrive();
+		USBPort.connect(p);  //upcasted in usbporter connect method
+		
+		Mouse m = new Mouse();
+				
+			USBPort.connect(m);
+	}
+
+}

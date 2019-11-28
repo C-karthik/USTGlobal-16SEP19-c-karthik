@@ -1,0 +1,32 @@
+// constructor overloading
+public class Crush {
+	int id;
+	String name;
+	long adno;
+	Crush(int id, String name , long adno){
+		this.id = id;
+		this.name = name;
+		this.adno = adno;
+	}
+	Crush(int id , String name){
+		this.id = id;
+		this.name = name;
+	}
+	Crush( String name , int id) {
+		this.id = id;
+		this.name = name;
+	}
+	void displ() {
+		System.out.print(name + " - ");
+		System.out.print(adno + " -");
+		System.out.println(id);
+	}
+	public static void main(String[] args) {
+		Crush c = new Crush( "sanvi" , 121);
+		c.displ();
+		Crush c1 = new Crush(122, "divya");
+		c1.displ();
+		Crush c2 = new Crush(123, "chandu" , 123456782);
+		c2.displ();
+	}
+}

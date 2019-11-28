@@ -1,0 +1,14 @@
+public class ConConcept {
+	int types;
+	String wt;
+	public ConConcept(int ctypes , String wtc) {
+           types = ctypes; //optional to write this key word
+           this .wt = wtc;
+           }
+	public static void main(String[] args) {
+		ConConcept cc = new ConConcept( 2, "default, user defined");
+		System.out.println(cc.types);
+		System.out.println(cc.wt);
+	}
+
+}

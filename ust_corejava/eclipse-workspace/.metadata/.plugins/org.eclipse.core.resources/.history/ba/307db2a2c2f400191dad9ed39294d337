@@ -1,0 +1,9 @@
+public class SuperClass {
+	
+	String s = "SuperClass variable";
+	
+	SuperClass(){
+		System.out.println("super cass constructor");
+	}
+
+}

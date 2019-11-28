@@ -1,0 +1,7 @@
+public class TestC {
+	
+	Cow c = new Cow();
+	c.cost = 50000;
+	c.color = "white"
+
+}

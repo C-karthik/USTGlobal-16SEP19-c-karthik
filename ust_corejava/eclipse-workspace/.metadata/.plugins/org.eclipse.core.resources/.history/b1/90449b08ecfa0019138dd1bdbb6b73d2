@@ -1,0 +1,18 @@
+package com.ustglobal.atmMachine;
+
+public class TestP {
+	public static void main(String[] args) {
+
+		Pen p = new Pen();
+
+		int pHashcode = p.hashCode();
+
+		System.out.println("HashCode of p " + pHashcode);
+
+		Pen q = new Pen();
+
+		int qHashcode = q.hashCode();
+
+		System.out.println("HashCode of q " + qHashcode);
+	}
+}

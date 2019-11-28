@@ -1,0 +1,58 @@
+public class Student {
+
+	int id;
+	int sem ;
+	String name;
+	String branch;
+	String cllg;
+	
+	Student(int id, String name , String branch, String cllg , int year){
+		
+		this.id = id;
+		this.name = name ;
+		this.branch = branch;
+		this.cllg = cllg;
+		sem = year;
+
+	}
+	
+	void display() {
+		System.out.println(id);
+		System.out.println(name);
+		System.out.println(branch);
+		System.out.println(cllg);
+		System.out.println(sem);
+	}
+	
+	public static void main(String[] args) {
+		
+		Student s1 = new  Student(121 , "karthik" , "eee" , "svu" , 4);
+		s1.display();
+		Student s2 = new  Student(121 , "manju" , "ece" , "kpm" , 4);
+		s2.display();
+		Student s3 = new  Student(121 , "deepti" , "ece" , "svu" , 4);
+		s3.display();
+		Student s4 = new  Student(121 , "vishnu" , "ece" , "mysore c e" , 4);
+		s4.display();
+		Student s5 = new  Student(121 , "sanvi" , "eee" , "jntua" , 4);
+		s5.display();
+		Student s6 = new  Student(121 , "viji" , "eee" , "jntucek" , 4);
+		s6.display();
+		Student s7 = new  Student(121 , "dora" , "mech" , "reva" , 4);
+		s7.display();
+		Student s8 = new  Student(121 , "mahesh" , "eee" , "jntucek" , 4);
+		s8.display();
+		Student s9 = new  Student(121 , "manoj" , "civil" , "mits" , 4);
+		s9.display();
+		Student s10 = new  Student(121 , "vinodh" , "cse" , "svcet" , 4);
+		s10.display();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

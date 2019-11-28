@@ -1,0 +1,8 @@
+public class TestSC {
+	 String s = "Subclass variable";
+	 TestSC(){
+		 super();
+		 System.out.println("sub class Constructor");
+	 }
+
+}

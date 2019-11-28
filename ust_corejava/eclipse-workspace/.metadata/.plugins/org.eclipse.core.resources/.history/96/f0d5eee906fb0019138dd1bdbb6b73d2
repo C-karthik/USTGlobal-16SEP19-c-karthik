@@ -1,0 +1,15 @@
+package com.ustglobal.objClass;
+
+public class Testpe {
+	
+	public static void main(String[] args) {
+		
+		Person p = new Person(10, "navina");
+		System.out.println(p.id);
+		System.out.println(p.name);
+		
+		Object o = p.clone();
+	}
+	
+
+}

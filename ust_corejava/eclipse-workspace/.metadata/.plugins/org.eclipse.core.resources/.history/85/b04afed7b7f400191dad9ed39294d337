@@ -1,0 +1,24 @@
+public class FactRange {
+	
+	int fact(n){
+		System.out.println(n);
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		for(int i =0; i<10; i++) {
+			
+		
+			
+			
+		}
+			
+		
+		
+	}
+
+	
+	
+
+}

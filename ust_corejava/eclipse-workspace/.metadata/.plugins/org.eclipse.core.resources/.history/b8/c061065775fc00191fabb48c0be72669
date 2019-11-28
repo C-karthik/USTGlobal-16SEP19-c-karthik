@@ -1,0 +1,21 @@
+package com.ustglobal.Singleton;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		MySingleton ms = MySingleton.getDbConnection();
+		
+		ms.s = "karthik";
+		
+		System.out.println("hashcode  to check sama obj r not " + ms.hashCode());
+		
+		
+		
+		MySingleton mx = MySingleton.getDbConnection();
+		mx.s = "hi";
+		System.out.println(" hascode of mx  "+ mx.hashCode());
+		
+	}
+
+}

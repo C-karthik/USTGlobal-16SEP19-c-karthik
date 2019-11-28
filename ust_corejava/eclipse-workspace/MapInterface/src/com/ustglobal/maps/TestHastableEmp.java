@@ -1,0 +1,31 @@
+package com.ustglobal.maps;
+
+import java.util.Hashtable;
+
+public class TestHastableEmp {
+	
+	public static void main(String[] args) {
+		
+		Hashtable<String, Integer> h = new Hashtable<String, Integer>();
+		
+		h.put("appu", 101);
+		h.put("avi", 121);
+		h.put("anvika", 121);
+		h.put("oviya", 121);
+		h.put("tanmay", 444);
+		
+		//dont take null as a key and value throws exception
+		//h.put(null, 121);
+		//h.put("avi", null);
+		
+		System.out.println(h);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

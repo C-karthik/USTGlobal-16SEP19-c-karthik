@@ -1,0 +1,12 @@
+package com.ustglobal.Singleton;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

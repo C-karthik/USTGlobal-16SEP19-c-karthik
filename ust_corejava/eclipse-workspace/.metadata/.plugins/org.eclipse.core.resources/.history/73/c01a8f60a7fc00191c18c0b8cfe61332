@@ -1,0 +1,26 @@
+package com.ustglobal.collectionframework.list;
+
+import java.util.ArrayList;
+
+public class TestS {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Student> as = new ArrayList<Student>();
+		
+		Student s = new Student(12, "nivi", 80.89);
+		
+		System.out.println(s);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

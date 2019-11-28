@@ -1,0 +1,9 @@
+package com.ustglobal.atmMachine;
+
+public class Pen {
+	
+	void write() {
+		System.out.println("writing with bpen");
+	}
+
+}

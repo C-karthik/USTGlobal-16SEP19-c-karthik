@@ -1,0 +1,48 @@
+package com.ustglobal.sorting.list;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class TypePen {
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+
+		ArrayList<Pen>  ar = new ArrayList();
+
+		Pen p = new Pen(10.01, "classmate");
+		Pen p1 = new Pen(5.21 , "santhoor");
+		Pen p2 = new Pen(7.09 , "cello");
+
+		ar.add(p);
+		ar.add(p1);
+		ar.add(p2);
+
+		System.out.println("before sorting");
+		displayDetail( ar);
+
+		System.out.println("--------------------------");
+
+		System.out.println("after sorting ");
+
+		Collections.sort(ar);
+		displayDetail( ar);
+
+
+	}//main method ends
+
+	static void displayDetail( ArrayList<Pen>  ar) {
+
+		Iterator<Pen> li = ar.iterator();
+		while(li.hasNext()) {
+			Pen pe = li.next();
+			System.out.println(pe);
+		}
+	}
+
+
+
+
+
+}

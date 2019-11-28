@@ -1,0 +1,22 @@
+package com.ustglobal.maps;
+
+import java.util.ArrayList;
+
+public class a {
+	public static void main(String[] args) {
+
+		ArrayList mylist = new ArrayList();
+		mylist.add("c");
+		mylist.add("h");
+		ArrayList mylist1 = new ArrayList();
+		mylist.add(1 ,"h");
+		mylist.add("c");
+		System.out.println(mylist.equals(mylist1));
+
+
+
+
+
+
+	}
+}

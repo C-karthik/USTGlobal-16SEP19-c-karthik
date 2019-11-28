@@ -1,0 +1,10 @@
+public class TestSC {
+	public static void main(String[] args) {
+		
+		SuperClass sup = new SuperClass();
+		
+		System.out.println("------getting from super class proporties also -------------");
+		
+		SubClass sub = new SubClass();
+	}
+}

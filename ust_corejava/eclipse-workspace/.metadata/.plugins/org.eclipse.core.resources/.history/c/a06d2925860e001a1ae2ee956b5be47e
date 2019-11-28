@@ -1,0 +1,27 @@
+package com.ustglobal.streams.list;
+
+import java.util.ArrayList;
+
+public class TestS {
+
+	
+	public static void main(String[] args) {
+		
+		
+		ArrayList<Student> as = new ArrayList<Student>();
+		
+		Student s = new Student(12, "tharun", 56.67);
+		Student s1 = new Student(12, "vinith", 66.67);
+		Student s3 = new Student(12, "veera", 56.77);
+		Student s2 = new Student(12, "varun", 76.07);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}

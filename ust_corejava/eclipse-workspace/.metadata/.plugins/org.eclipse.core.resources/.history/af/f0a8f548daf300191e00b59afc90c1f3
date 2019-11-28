@@ -1,0 +1,21 @@
+public class TestC {
+	public static void main(String[] args) {
+		Cow c = new Cow();
+		c.cost = 50000;
+		c.color = "white";
+
+		c.eat();
+		c.sleep();
+		
+		Cow c1 = new Cow();
+		c1.cost = 50000;
+		c1.color = "black";
+
+		c1.eat();
+		c1.sleep();
+		
+		
+	}
+	
+	
+}
