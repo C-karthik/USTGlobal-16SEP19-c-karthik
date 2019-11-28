@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action="./search">
+	
+		<table align="center">
+		<spam>
+		<a href = './home'>home</a>    <a href = './logout'   style = 'float : right'>logout </a>
+		</spam>
+			<tr>
+
+				<td>Search By ID :</td>
+				<td><input type="number" name="id"></td>
+				
+				<a href = "./logout"  style = 'float : right'>signout</a>
+
+			</tr>
+			<tr>
+
+				<td><input type="submit" value="search">
+			</tr>
+
+
+
+
+		</table>
+
+
+
+
+
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\957076974.index
+\appjsp\src
+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\166625106.index
+\empappjsp\src
+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2375136793.index
+\empwebappjsp\src
+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3194604671.index
+\appjsp\src
+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2459024042.index
+\app\src

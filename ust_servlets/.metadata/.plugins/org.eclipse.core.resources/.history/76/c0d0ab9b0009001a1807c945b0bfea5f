@@ -1,0 +1,7 @@
+package com.ustglobal.demoapp;
+
+import HttpServlet;
+
+public class AddServlet extends HttpServlet {
+
+}

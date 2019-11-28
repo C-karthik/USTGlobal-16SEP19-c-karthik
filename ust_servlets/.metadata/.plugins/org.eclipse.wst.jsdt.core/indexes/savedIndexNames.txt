@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+E:\ustgloba java programs\ustServlets\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2339407251.index
+4011081318.index
+287702027.index
+977455662.index
+2982291017.index
+2269456392.index
+957076974.index
+3929302613.index
+2272874782.index

@@ -1,0 +1,32 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<%!public int i = 10;     //decleration tag
+
+	public void m() {
+		System.out.println(i);      
+	}%>
+<%
+	Date date = new Date(); //Scripting tag
+	m();                                        //calling method 
+%>
+
+<body>
+
+
+
+	<h1 style='color: yellow'>
+		                       Date and Time is<%=date%></h1>
+	                                                             //it gives dynamic out put
+
+
+
+</body>
+</html>
