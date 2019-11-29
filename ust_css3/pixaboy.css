@@ -1,0 +1,46 @@
+.first{
+    background-image: url(/css/media/old-farmhouse-sunset-on-great-260nw-1094249837.webp);
+    transition: all 2s;
+    background-size: cover;
+    color:black;
+    height: 400px;
+    
+    
+}
+#yru{
+    color : white
+}
+#next{
+    color : black
+}
+.gt{
+    width : 200px;
+    height: 50px;
+   padding: 0px;
+}
+input[type='search']{
+
+    width: 750px;
+    height: 40px;                                 
+    border: 1px solid black;
+     border-radius: 10px; 
+    text-align: center;
+    font-size: 28px;
+}
+.first2{
+    /* background-image: url(/css/media/thE9N4SC24.jp); */
+    background-size: cover;
+    color: aqua;
+    height: 400px;
+}
+img{
+    width: 280px;
+    height: 320px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 10 0 10;
+}
+img:hover{
+    transform:scale(1.1,1.1);
+}
