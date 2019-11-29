@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+     function myFun()
+     {
+       var c =  document.getElementById("c");
+       var d =  document.getElementById("d");
+       var g =  document.getElementById("g");
+       if(c.checked == true){
+           alert(c.value);
+       } else if( d.checked == true){
+           alert(d.value)
+       }else if(g.checked == true){ 
+           alert(g.value)
+       }else {
+           alert("click over gender")
+       } 
+     }
+    </script>
+</head>
+<body>
+    <input type="radio" name="gender" value="male" id="c">male</input>
+    <br><br>
+    <input type="radio" name="gender" value="female" id="d">female</input>
+    <br><br>
+    <input type="radio" name="gender" value="other" id="g">other</input>
+    <br><br>
+    <button onclick="myFun()">click me</button>
+</body>
+</html>

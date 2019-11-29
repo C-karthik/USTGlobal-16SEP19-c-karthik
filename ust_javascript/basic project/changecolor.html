@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>basic Project</title>
+    <script src="default.js"></script>
+</head>
+<body>
+    <script>
+     // document.write("hello world")  embeded form  
+       var x = 3;
+        if(x%2 == 0 && x > 0){
+
+            document.write("event number");
+        } else {
+
+            document.write("odd num");
+        }
+    
+     // console.log("writed in console")
+        
+     // switch case :
+
+     var d = 1;
+     switch(d)
+     {
+         case 1 : 
+         document.write("<h2>monday<h2>");
+            break;
+        case 2 : 
+        document.write("tuesday");
+        break;
+     }
+                
+           function add(a,b){
+
+               var c = a + b ;
+               return c;
+
+           }
+                    var e = add(12,32);
+                    var d = add(12,30);
+                    document.writeln(e);
+                    document.writeln(d);
+     // arrays
+        var aR = ["KARTHIK","karthi","CHANDRUKARTHIK"];
+        //aR.push("sachin");  
+              
+      
+              for(var i = 0 ; i < aR.length; i++ )
+              {
+                document.write("<br>"+aR[i]);
+              }
+       //objects
+
+       var person = [{
+           name : 'karthik',
+           age : 21,
+           sal : 50000
+       },{
+           name : 'sachin',
+           age : 21,
+           sal : 5000
+       }  ]
+
+       document.writeln(person);
+        console.log(person)
+
+                 
+
+    
+    </script>
+</body>
+</html>

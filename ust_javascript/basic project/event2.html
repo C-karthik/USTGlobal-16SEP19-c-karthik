@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function mySel(){
+    var s = document.getElementById("s");
+    alert(s.options[s.selectedIndex].value);
+        }
+    </script>
+</head>
+<body>
+<select name="select" id="s">
+    <option value="select">select</option>
+<option value="ok">ok</option>
+<option value="hi">hi</option>
+<option value="hii">bii</option>
+</select>
+<br><br>
+<button onclick="mySel()">click me</button>    
+</body>
+</html>
