@@ -1,0 +1,38 @@
+                                                                                                                                               <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="hello" class="com.ustglobal.spring_core.di.Hello" init-method = "init" destroy-method = "destory">
+		<property name="msg" value="I love java"></property>
+		<property name="map">
+		
+		 <map>
+    
+         <entry key = "one" value = "1"></entry>
+         <entry key = "tw0" value = "2"></entry>
+    
+    
+        </map>
+		
+		</property>
+	</bean>
+	
+	<bean id="dog" class="com.ustglobal.spring_core.di.DogImpl" primary="true" />
+	<bean id="human" class="com.ustglobal.spring_core.di.HumanImpl" />
+	<bean id="animal" class="com.ustglobal.spring_core.di.CatImpl" />
+
+	<bean id="pet" class="com.ustglobal.spring_core.di.Pet" autowire="byName">
+		<property name="name" value="buddy"></property>
+		<!-- <property name="animal" ref = "dog"></property> -->
+		<!-- <constructor-arg name="name" value="tuger" /> -->
+		<!-- <constructor-arg name="animal" ref="human" /> -->
+	</bean>
+	<bean id = "beanPostProcesser" class = "com.ustglobal.spring_core.di.BeanPostProcesser" />
+    <bean id = "BeanFactoryPostProcesser" class = "com.ustglobal.spring_core.di.BeanFactoryPostProcesser"/>
+   
+</beans> 
