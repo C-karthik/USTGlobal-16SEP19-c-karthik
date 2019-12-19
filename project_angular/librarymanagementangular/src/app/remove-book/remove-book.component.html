@@ -1,0 +1,41 @@
+
+<div class="bg-img">
+        <h3 style="color: green; text-align: center;">{{msg}}</h3>
+
+<br>
+<div class="container">
+        <h1 style="color:red;font-family:'Times New Roman', Times, serif;text-align:center">Books List</h1>
+
+    <!-- <h1 style="font-family: 'Times New Roman', Times, serif;  text-align: center;" class="btn-success" >Books List</h1><br> -->
+        <input type="search" style="width: 70%; margin-left: 15%;  border: 1px solid black;" class="form-control"  [(ngModel)]='search'  placeholder="Search Book Name"><br>
+
+<table class="table table-striped mt-5 ">
+        
+<thead class="thead-inverse bg-dark">
+            
+        <tr style="color: white;">
+            <th>Book Id</th>
+            <th>Book Name</th>
+            <th>Author1</th>
+            <th>Author2</th>
+            <th>Publisher</th>
+            <th>Year Of Publication</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody class="bg-light">
+            <tr *ngFor='let book of books | filter : search'>
+                <td scope="row">{{book.bookId}}</td>
+                <td>{{book.bookName}}</td>
+                <td>{{book.author1}}</td>
+                <td>{{book.author2}}</td>
+                <td>{{book.publisher}}</td>
+                <td>{{book.yearOfPublication}}</td>
+               
+                <td><button class="btn btn-danger" (click)='deleteBook(book)'>Delete</button></td>
+            </tr>
+           
+        </tbody>
+</table>
+</div>
+</div>

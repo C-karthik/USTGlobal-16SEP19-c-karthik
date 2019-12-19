@@ -1,0 +1,33 @@
+
+<div class="bg-img">
+<br>
+<div class="container">
+<h1 style="color:red;font-family:'Times New Roman', Times, serif;text-align:center">Allocated Books</h1>
+<table class="table table-striped  mt-5" style="">
+    <thead class="thead-inverse bg-dark">
+        <tr style="color: whitesmoke;">
+            
+            <th>Index</th>
+            <th>userId</th>
+
+            <th>Book Id</th>
+            <th>Book Name</th>
+            <th>Issued Date</th>
+            <th >ReturnDate</th>
+        </tr>
+        </thead>
+        <tbody class="bg-info">
+             <tr *ngFor='let book of books;index as i'> 
+                <td style="color:white;">{{i+1}}</td>
+                <td style="color:white;">{{book.userId}}</td>
+
+                <td style="color:white;">{{book.bookId}}</td>
+                <td style="color:white;">{{book.bookName}}</td>
+                <td style="color:white;">{{book.issuedDate}}</td>
+                <td style="color:white;">{{book.returnDate}}</td>
+
+            </tr> 
+        </tbody>
+</table>
+</div>
+</div>

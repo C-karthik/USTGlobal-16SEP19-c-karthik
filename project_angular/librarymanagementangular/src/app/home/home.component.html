@@ -1,0 +1,53 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand"  routerLink="#">Library</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+        
+    
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"  >
+            <a class="nav-link " routerLink="/head">home</a>
+          </li>
+        <!-- <li class="nav-item active" *ngIf='isAdmin()' >
+            <a class="nav-link " routerLink="/admin">Admin</a>
+          </li> -->
+          <li class="nav-item active" *ngIf='isStudent()'  >
+              <a class="nav-link " routerLink="/student">Student</a>
+            </li>
+            <li class="nav-item active"  *ngIf='isLibrarian()' >
+                <a class="nav-link " routerLink="/lib">librarian</a>
+              </li>
+              <li class="nav-item active"  *ngIf='isLibrarian()'  >
+                  <a class="nav-link " routerLink="/addbook">addBook</a>
+                </li>
+                <li class="nav-item active" *ngIf='isLibrarian()' >
+                    <a class="nav-link " routerLink="/removebook">RemoveBook</a>
+                  </li>
+                  <li class="nav-item active"  *ngIf='isLibrarian()'  >
+                      <a class="nav-link " routerLink="/issuebook">issueBook</a>
+                    </li>
+                        
+                    <li class="nav-item active"  *ngIf='isLibrarian()'  >
+                      <a class="nav-link " routerLink="/sbd">issuedStudentdetails</a>
+                    </li>
+      
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active float-right" *ngIf='isAdmin()'>
+        <a class="nav-link" routerLink="/reg">Register</a>
+      </li>
+      <li class="nav-item active float-right" *ngIf='!isLoggedIn()'>
+        <a class="nav-link " routerLink="/log">login</a>
+      </li>
+      <li class="nav-item active float-right" *ngIf='isLoggedIn()'>
+        <button class="btn btn-outline-light" (click) = 'logout()'>logout</button>
+      </li></ul>
+  </div>
+</nav>
+

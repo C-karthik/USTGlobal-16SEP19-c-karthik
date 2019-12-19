@@ -1,0 +1,46 @@
+<div class="bg-img">  
+<h5 style="color: red; text-align: center;" >{{msg}}</h5>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 card card-body  mt-5">
+                <form #userLoginForm='ngForm' (ngSubmit)='userlogin(userLoginForm)' class="form-container">
+                        <h1 class="btn-dark" style="text-align: center;">Login Here</h1>
+
+                        <div class="form-group">
+                            <input type="email" name='userEmail' #userEmail='ngModel' ngModel  class="form-control" placeholder="Enter Email Here" required minlength="7" email>
+                       <div *ngIf='userEmail.touched&&userEmail.invalid'>
+                           <div *ngIf="userEmail.errors.required">
+                               <small style="color: red;">This field cannot be empty</small>
+                           </div>
+                           <div *ngIf="userEmail.errors.email">
+                                <small style="color: red;">This field accepts only email</small>
+                            </div>
+                            <div *ngIf="userEmail.errors.minlength">
+                                    <small style="color: red;">This field must contain atleast 7 characters</small>
+                                </div>
+
+                       </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name='userPassword' #userPassword='ngModel' ngModel  class="form-control" placeholder="Enter Password Here" required minlength="6">
+                            <div *ngIf='userPassword.touched&&userPassword.invalid'>
+                                    <div *ngIf="userPassword.errors.required">
+                                        <small style="color: red;">This field cannot be empty</small>
+                                    </div>
+                                    <div *ngIf="userPassword.errors.minlength">
+                                         <small style="color: red;">This field must contain atleast 6 characters</small>
+                                     </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success col-md-6 form-control float-right" [disabled]='userLoginForm.invalid'>Login</button>
+                        </div>
+                    </form>
+        </div>
+
+    </div>
+</div>
+
+</div> 

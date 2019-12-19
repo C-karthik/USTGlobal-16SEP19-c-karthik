@@ -1,0 +1,71 @@
+
+
+<div class="bg-img">
+        <h3 style="color: green; text-align: center;">{{msg}}</h3>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                    <form action="" #bookform='ngForm' (ngSubmit)='addBook(bookform)' class="form-container">
+                            <h1 style="text-align: center;color:black;font-family: 'Times New Roman', Times, serif;"> Add Book!!</h1><br>
+                            <div class="form-group">
+                                <input type="number" name='bookId' #bookId='ngModel' ngModel  class="form-control" placeholder="Enter Book Id" required>
+                                <div *ngIf='bookId.touched&&bookId.invalid'>
+                                        <small style="color: red;">This field cannot be empty</small>
+                                    </div>
+                                  
+                                         
+
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name='bookName' #bookName='ngModel' ngModel  class="form-control" placeholder="Enter Book Name " required>
+                                <div *ngIf='bookName.touched&&bookName.invalid'>
+                                    <small style="color: red;">This field cannot be empty</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                   
+                                <input type="text" name='author1' #author1='ngModel' ngModel  class="form-control" placeholder="Enter Author 1 Name " required>
+                                <div *ngIf='author1.touched&&author1.invalid'>
+                                        <small style="color: red;">This field cannot be empty</small>
+                                    </div>   
+                            </div>
+                                <div class="form-group">
+                                    <input type="text" name='author2' #author2='ngModel' ngModel 
+                                     class="form-control" placeholder="Enter Author 2 Name " required>
+                                    </div>
+                                     <div *ngIf="author2.touched&&author2.invalid">
+                                        <div *ngIf="author2.errors.required">
+                                            
+                                            <small style="color: red;">This field cannot be empty</small>
+                                        </div>
+                                        </div>   
+                        
+                                <div class="form-group">
+                                        <input type="text" name='publisher' #publisher='ngModel' ngModel  class="form-control" placeholder="Enter Publisher " required>
+                                        <div *ngIf='publisher.touched&&publisher.invalid'>
+                                                <small style="color: red;">This field cannot be empty</small>
+                                            </div>   
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        <input type="number" name='yearOfPublication' #yearOfPublication='ngModel' ngModel class="form-control" placeholder="Enter yearOfPublication " required>
+                                        <div *ngIf=yearOfPublication.touched&&yearOfPublication.invalid>
+                                                <small style="color: red;">This field cannot be empty</small>
+                                            </div> 
+                                    </div>
+                                   
+                            <div class="form-group">
+                                <button type="reset" class="btn btn-warning col-md-6 form-control">Reset</button>
+                                <button type="submit" class="btn btn-success col-md-6 form-control float-right" [disabled] ='bookform.invalid'>Add Book</button>
+                            </div>
+                            <div class="form-group">
+                                <h5 style="color:green;text-align: center;">{{msg}}</h5>
+                            </div>
+                        </form>
+            </div>
+    
+        </div>
+    </div>
+</div>
+    
