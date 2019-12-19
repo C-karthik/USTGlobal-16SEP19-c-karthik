@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">LibraryManagementSystem</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link font-weight-bolder" routerLink="/">Home<i class="fas fa-home"></i></a>
+          </li>
+    
+          <!-- ADMIN PERFORMANCE -->
+          <li class="nav-item active" *ngIf="isALoggedIn">
+            <a class="nav-link " routerLink="/Admin">Admin</a>
+          </li>
+          <li class="nav-item active"  *ngIf="isALoggedIn">
+            <a class="nav-link " routerLink="/showallusers">All Users</a>
+          </li>
+          <li class="nav-item active"  *ngIf="isALoggedIn">
+            <a class="nav-link " routerLink="/adduser">Add Users</a>
+          </li>
+         
+          <!-- LIBRARIAN PERFORMANCE -->
+    
+           <li class="nav-item active" *ngIf="isLLoggedIn">
+            <a class="nav-link " routerLink="/viewrequest">viewrequest</a>
+          </li>
+          <li class="nav-item active" *ngIf="isLLoggedIn">
+            <a class="nav-link " routerLink="/addbook">addBooks</a>
+          </li>
+          <li class="nav-item active"*ngIf="isLLoggedIn" >
+            <a class="nav-link " routerLink="/issuedbook">Issued Books</a>
+          </li>
+          <li class="nav-item active" *ngIf="isLLoggedIn || isSLoggedIn">
+            <a class="nav-link " routerLink="/displaybooks">ShowAllBooks</a>
+          </li>
+          <!-- STUDENT PERFORMANCE -->
+          <li class="nav-item active" *ngIf="isSLoggedIn" >
+            <a class="nav-link font-weight-bolder" routerLink="/requestbook">requestBook</a>
+          </li>
+        </ul>
+        <!-- LOGIN AND LOGOUT -->
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active" *ngIf="!isALoggedIn && !isLLoggedIn && !isSLoggedIn">
+                <button type="button" class="btn btn-dark font-weight-bolder" routerLink="/register">Register</button>
+              </li>
+          <li class="nav-item active" *ngIf="!isALoggedIn && !isLLoggedIn && !isSLoggedIn">
+            <button type="button" class="btn btn-dark font-weight-bolder" routerLink="/login">login</button>
+          </li>
+          <li class="nav-item active" *ngIf="isALoggedIn || isLLoggedIn || isSLoggedIn" >
+            <button type="button" class="btn btn-dark btn-outline-light" (click)="logout()">logout</button>
+          </li>
+        </ul>
+      </div>
+</nav>

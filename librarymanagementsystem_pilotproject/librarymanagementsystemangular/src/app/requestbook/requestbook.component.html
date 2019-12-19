@@ -1,0 +1,24 @@
+<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+<div class="col-md-4 offset-md-4 mt-5 card">
+    <div class="card-header">
+        <div class="card-title">
+            <h4>Add the Book Required</h4>
+        </div>
+    </div>
+    <div class="card-body">
+        <form #requestBookForm='ngForm' (ngSubmit)='requestBook(requestBookForm)'>
+            <input type="number" name="studentId" id="studentId" placeholder="Enter Student id.." #studentId='ngModel'
+                ngModel class="form-control mb-3">
+            <input type="number" name="bookId" id="bookId" placeholder="Enter book id.." #bookId='ngModel' ngModel
+                class="form-control mb-3">
+            <input type="text" name="bookname" id="bookname" placeholder="Enter book Name.." #bookname='ngModel' ngModel
+                class="form-control mb-3">
+            <input type="text" name="author" id="author" placeholder="Enter Auther Name.." #author='ngModel' ngModel
+                class="form-control mb-3">
+            <input type="date" name="date" id="date" #date='ngModel' ngModel class="form-control mb-3"
+                placeholder="Enter DOR..">
+            <button class="btn btn-outline-dark ; float-right" type="submit">Make Request</button>
+
+        </form>
+    </div>
+</div>
