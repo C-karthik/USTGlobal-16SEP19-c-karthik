@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "assessment1": {
+    "stockmanagement": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/assessment1",
+            "outputPath": "dist/stockmanagement",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,11 +25,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+
             ]
           },
           "configurations": {
@@ -67,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "assessment1:build"
+            "browserTarget": "stockmanagement:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "assessment1:build:production"
+              "browserTarget": "stockmanagement:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "assessment1:build"
+            "browserTarget": "stockmanagement:build"
           }
         },
         "test": {
@@ -115,15 +117,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "assessment1:serve"
+            "devServerTarget": "stockmanagement:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "assessment1:serve:production"
+              "devServerTarget": "stockmanagement:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "assessment1"
+  "defaultProject": "stockmanagement"
 }
